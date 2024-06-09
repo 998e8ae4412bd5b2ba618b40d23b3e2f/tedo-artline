@@ -1,0 +1,16 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Fixel Text", serif;
+}
+
+body {
+    background: #F2F6FF;
+    overflow-x: hidden;
+}
+
+
+
