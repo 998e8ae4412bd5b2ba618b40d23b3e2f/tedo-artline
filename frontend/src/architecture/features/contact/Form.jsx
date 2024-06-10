@@ -57,9 +57,6 @@ const Button = styled.button`
 
     & svg {
       stroke: var(--color-black);
-      stroke: var(--color-black);
-      stroke: var(--color-black);
-
     }
   }
 
@@ -77,6 +74,7 @@ const Form = () => {
     const [message, setMessage] = useState("");
     const [isSent, setIsSent] = useState(false);
     const [isHover, setHover] = useState(false);
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -107,13 +105,13 @@ const Form = () => {
             return
         }
 
-        const url = 'http://localhost:5000/digital-contact';
         const data = {
             name:`${firstName} ${secondName}`,
             email,
             comment: message
         };
 
+        const url = import.meta.env.VITE_CONTACT_URL
         try {
             const response = await fetch(url, {
                 method: 'POST',

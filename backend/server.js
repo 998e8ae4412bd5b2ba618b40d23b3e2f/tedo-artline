@@ -5,42 +5,41 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT;
+const PORT = process.env.PORT || 5000;
+
 
 app.use(cors());
 app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({
-    host: 'mail.privateemail.com',
-    port: 587,
-    secure: false, // true для 465, false для других портов
+    host: process.env.TRANSPORTER_HOST,
+    port: parseInt(process.env.TRANSPORTER_PORT, 10),
+    secure: process.env.TRANSPORTER_SECURE === 'true',
     auth: {
-        user: 'main@tedogroup.com', // ваш email для отправки писем
-        pass: '20jsr63mkm37p7X' // ваш пароль для отправки писем
-    }
+        user: process.env.TRANSPORTER_USER,
+        pass: process.env.TRANSPORTER_PASSWORD,
+    },
 });
 
-app.post('/digital-contact', (req, res) => {
+app.post('/contact', (req, res) => {
     const { name, email, comment } = req.body;
-    console.log(req.body);
 
     const mailOptions = {
-        from: "main@tedogroup.com",
-        to: "pochtastud@gmail.com",
+        from: process.env.MAIL_FROM,
+        to: process.env.MAIL_TO,
         subject: `Message from ${email}`,
-        text: `Name: ${name} \ncomment: ${comment}`
+        text: `Name: ${name} \nComment: ${comment}`,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log(error);
-            return res.status(500).json({ success: false, error });
+            console.error('Error sending email:', error);
+            return res.status(500).json({ success: false, error: 'Failed to send email' });
         }
-        res.status(200).json({ success: true });
+        res.status(200).json({ success: true, info });
     });
-
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });

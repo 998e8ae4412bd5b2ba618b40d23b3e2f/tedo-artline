@@ -132,8 +132,7 @@ const Form = () => {
             comment
         };
 
-        const url = 'http://localhost:5000/digital-contact';
-
+        const url = import.meta.env.VITE_CONTACT_URL
         try {
             const response = await fetch(url, {
                 method: 'POST',
