@@ -87,23 +87,23 @@ const Projects = () => {
                     loop={true}
                 >
                     <Item>
-                        <img src="/architecture/home/solution-1.svg" alt="iamge"/>
+                        <img src="/architecture/home/solution-1.webp" alt="iamge"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
-                    <Item><img src="/architecture/home/solution-2.svg" alt="iamge"/>
+                    <Item><img src="/architecture/home/solution-2.webp" alt="iamge"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
-                    <Item><img src="/architecture/home/solution-3.svg" alt="iamge"/>
+                    <Item><img src="/architecture/home/solution-3.webp" alt="iamge"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
                     <Item>
-                        <img src="/architecture/home/solution-1.svg" alt="iamge"/>
+                        <img src="/architecture/home/solution-1.webp" alt="iamge"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
-                    <Item><img src="/architecture/home/solution-2.svg" alt="iamge"/>
+                    <Item><img src="/architecture/home/solution-2.webp" alt="iamge"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
-                    <Item><img src="/architecture/home/solution-3.svg" alt="iamge"/>
+                    <Item><img src="/architecture/home/solution-3.webp" alt="iamge"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
                 </Swiper>

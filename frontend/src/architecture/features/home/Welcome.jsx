@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
-  background: url("/architecture/home/main-bg.svg") no-repeat center center;
+  background: url("/architecture/home/main-bg.webp") no-repeat center center;
   background-size: cover;
   width: 100%;
   min-height: 100%;

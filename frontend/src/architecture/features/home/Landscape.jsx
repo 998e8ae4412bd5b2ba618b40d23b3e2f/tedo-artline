@@ -100,7 +100,7 @@ const Img = styled.div`
   position: relative;
   width: 100%;
   height: 40vw;
-  background-image: url('/architecture/home/landscape-img-active.svg');
+  background-image: url('/architecture/home/landscape-img-active.webp');
   background-size: cover;
   background-position: center;
 
@@ -111,7 +111,7 @@ const Img = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/architecture/home/landscape-img.svg');
+    background-image: url('/architecture/home/landscape-img.webp');
     background-size: cover;
     background-position: center;
     opacity: 0;

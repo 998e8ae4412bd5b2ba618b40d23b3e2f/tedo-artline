@@ -44,7 +44,7 @@ const Logo = () => {
     const navigate = useNavigate();
 
     return (
-        <Container onClick={()=>navigate("/home")}>
+        <Container onClick={()=>navigate("/digital/home")}>
             <img src="/digital/ui/logo.svg" alt="logo-icon"/>
             <p>Tedo Artline</p>
         </Container>

@@ -26,7 +26,7 @@ const Contact = () => {
         <>
             {
                 window.innerWidth < 768 &&
-                <Container onClick={() => navigateTo("contacts")}>
+                <Container onClick={() => navigateTo("/architecture/contacts")}>
                     <p>Contact with us</p>
                 </Container>
             }

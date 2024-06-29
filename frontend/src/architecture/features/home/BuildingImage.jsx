@@ -64,11 +64,11 @@ const BigImage = styled.div`
 const BuildingImage = () => {
     return (
         <Container>
-            <Image src={"/architecture/home/building/image-1.svg"} active={"/architecture/home/building/image-active-1.svg"}/>
-            <Image src={"/architecture/home/building/image-2.svg"} active={"/architecture/home/building/image-active-2.svg"}/>
-            <BigImage src={"/architecture/home/building/image-5.svg"} active={"/architecture/home/building/image-5.svg"}/>
-            <Image src={"/architecture/home/building/image-3.svg"} active={"/architecture/home/building/image-active-3.svg"}/>
-            <Image src={"/architecture/home/building/image-4.svg"} active={"/architecture/home/building/image-active-4.svg"}/>
+            <Image src={"/architecture/home/building/image-1.webp"} active={"/architecture/home/building/image-active-1.webp"}/>
+            <Image src={"/architecture/home/building/image-2.webp"} active={"/architecture/home/building/image-active-2.webp"}/>
+            <BigImage src={"/architecture/home/building/image-5.webp"} active={"/architecture/home/building/image-5.webp"}/>
+            <Image src={"/architecture/home/building/image-3.webp"} active={"/architecture/home/building/image-active-3.webp"}/>
+            <Image src={"/architecture/home/building/image-4.webp"} active={"/architecture/home/building/image-active-4.webp"}/>
         </Container>
     );
 };

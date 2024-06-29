@@ -106,27 +106,27 @@ const VerticalProjects = () => {
             <Wrapper>
                 <Container>
                     <Item>
-                        <Image src="/architecture/home/solution-1.svg" alt="image"/>
+                        <Image src="/architecture/home/solution-1.webp" alt="image"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
                     <Item>
-                        <Image src="/architecture/home/solution-2.svg" alt="image"/>
+                        <Image src="/architecture/home/solution-2.webp" alt="image"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
                     <Item>
-                        <Image src="/architecture/home/solution-3.svg" alt="image"/>
+                        <Image src="/architecture/home/solution-3.webp" alt="image"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
                     <Item>
-                        <Image src="/architecture/home/solution-1.svg" alt="image"/>
+                        <Image src="/architecture/home/solution-1.webp" alt="image"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
                     <Item>
-                        <Image src="/architecture/home/solution-2.svg" alt="image"/>
+                        <Image src="/architecture/home/solution-2.webp" alt="image"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
                     <Item>
-                        <Image src="/architecture/home/solution-3.svg" alt="image"/>
+                        <Image src="/architecture/home/solution-3.webp" alt="image"/>
                         <More onClick={()=>navigateTo("/architecture/project1")}>See project</More>
                     </Item>
                 </Container>

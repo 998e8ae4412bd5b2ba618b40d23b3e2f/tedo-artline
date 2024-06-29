@@ -43,6 +43,9 @@ const Img = styled.img`
 `
 
 const Text = () => {
+
+
+
     return (
         <Container>
             <Item>

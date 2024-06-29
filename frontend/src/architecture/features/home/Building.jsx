@@ -85,7 +85,7 @@ const Line1 = styled.img`
   bottom: 5%;
   left: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1500px) {
     display: none;
   }
 `
@@ -95,7 +95,8 @@ const Line2 = styled.img`
   top: 10%;
   left: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1500px) {
+
     display: none;
   }
 `
@@ -105,7 +106,7 @@ const Line3 = styled.img`
   top: 25%;
   right: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1500px) {
     display: none;
   }
 `

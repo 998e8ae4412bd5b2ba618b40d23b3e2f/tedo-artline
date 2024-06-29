@@ -38,6 +38,11 @@ const Top = styled.div`
     flex-direction: column;
     height: 50%;
   }
+
+  @media(min-width: 3000px){
+    padding-bottom: 300px;
+
+  }
 `
 
 
@@ -57,7 +62,7 @@ const LogoContainer = styled.div`
 
 `
 
-const P = styled.p`
+const P = styled.div`
   justify-self: end;
   width: 30%;
   
@@ -94,6 +99,7 @@ const Bottom = styled.div`
     height: 50%;
     position: relative;
   }
+  
 `
 
 
@@ -167,6 +173,7 @@ const Linkedin = styled.div`
 
 
 const Policy = styled.div`
+  z-index: 100;
   min-height: 56px;
   background: var(--color-white);
   display: flex;
@@ -178,10 +185,6 @@ const Policy = styled.div`
     font-size: 14px;
     color: var(--color-black);
     padding-left: 2rem;
-  }
-
-  @media (max-width: 1000px) {
-    display: none;
   }
 
 `

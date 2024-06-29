@@ -32,7 +32,7 @@ const ImgContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url("/architecture/home/touch-img.svg") center center no-repeat;
+  background: url("/architecture/home/touch-img.webp") center center no-repeat;
   background-size: cover;
   z-index: 10;
 

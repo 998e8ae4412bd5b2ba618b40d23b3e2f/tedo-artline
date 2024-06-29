@@ -30,7 +30,11 @@ const Content = styled.div`
     gap: 0;
     top: -10px;
     transform: translate(-50%, 0);
-    
+  }
+  
+  @media(max-width: 420px){
+    top: 40%;
+    transform: translate(-50%, -50%);
   }
   
 `
@@ -141,6 +145,7 @@ const StyledLink = styled(Link)`
 `
 
 const ButtonContainer = styled.div`
+  cursor: pointer;
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -188,7 +193,7 @@ const Menu = ({isMenu}) => {
                     <StyledLink active={isActive("architecture/contacts")} to={"architecture/contacts"}>Contacts</StyledLink>
                 </Links>
             </Content>
-            <ButtonContainer>Digital Design</ButtonContainer>
+            <ButtonContainer onClick={()=>navigateTo("/digital/home")}>Digital Design</ButtonContainer>
         </Container>
     );
 };

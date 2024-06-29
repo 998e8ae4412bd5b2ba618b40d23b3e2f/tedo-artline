@@ -136,7 +136,7 @@ const Header = () => {
                 <Logo isTransparent={transparent} isGrey={isGrey} isMenu={isOpenBurger}/>
                 {(window.innerWidth > 768 && isHome === "true" && !isOpenBurger)
                     &&
-                    <Contact onClick={()=>navigateTo("contacts")}>
+                    <Contact onClick={()=>navigateTo("/architecture/contacts")}>
                         <p>Contact with us</p>
                     </Contact>
                 }
