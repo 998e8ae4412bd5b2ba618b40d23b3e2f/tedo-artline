@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import PropTypes from "prop-types";
+import {useTranslation} from "react-i18next";
 
 
 const Container = styled.div`
@@ -134,14 +135,15 @@ const Item = styled.div`
 
 
 const PricingSelect = ({option, setOption}) => {
+    const {t}=useTranslation()
 
     return (
         <Container>
-            <Item active={option === "basic" ? "basic" : null} onClick={() => setOption("basic")}>Basic</Item>
+            <Item active={option === "basic" ? "basic" : null} onClick={() => setOption("basic")}>{t("main.contact.form.basic")}</Item>
             <Item active={option === "advanced" ? "advanced" : null}
-                  onClick={() => setOption("advanced")}>Advanced</Item>
+                  onClick={() => setOption("advanced")}>{t("main.contact.form.advanced")}</Item>
             <Item active={option === "professional" ? "professional" : null}
-                  onClick={() => setOption("professional")}>Professional</Item>
+                  onClick={() => setOption("professional")}>{t("main.contact.form.professional")}</Item>
         </Container>
     );
 };

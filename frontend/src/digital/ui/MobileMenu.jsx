@@ -75,24 +75,24 @@ const Talking = styled(Link)`
 `
 
 const MobileMenu = () => {
+    const {t}=useTranslation()
     const {toggleBurger} = useBurger();
-    const {t} = useTranslation();
     const isActive = (path) => location.pathname.includes(path) ? "active" : "";
 
     return (
         <Container>
             <Header>
-                <h2>Menu</h2>
+                <h2>{t("header.menu")}</h2>
                 {window.innerWidth <= 768 ? <Burger/> : null}
             </Header>
             <Links>
-                <StyledLink onClick={toggleBurger} active={isActive("/digital/home")} to={"digital/home"}>Home</StyledLink>
-                <StyledLink onClick={toggleBurger} active={isActive("/digital/services")} to={"digital/services/ui-ux"}>Services</StyledLink>
-                <StyledLink onClick={toggleBurger} active={isActive("/digital/about")} to={"digital/about"}>About Us</StyledLink>
-                <StyledLink onClick={toggleBurger} active={isActive("/digital/partners")} to={"digital/partners"}>Our Partners</StyledLink>
+                <StyledLink onClick={toggleBurger} active={isActive("/digital/home")} to={"digital/home"}>{t("header.home")}</StyledLink>
+                <StyledLink onClick={toggleBurger} active={isActive("/digital/services")} to={"digital/services/ui-ux"}>{t("header.services")}</StyledLink>
+                <StyledLink onClick={toggleBurger} active={isActive("/digital/about")} to={"digital/about"}>{t("header.about")}</StyledLink>
+                <StyledLink onClick={toggleBurger} active={isActive("/digital/partners")} to={"digital/partners"}>{t("header.partners")}</StyledLink>
             </Links>
             <Talking active={isActive("/digital/contact")} to={"digital/contact"}>
-                Let’s talk <img src="/digital/ui/arrow-up-right.svg" alt="arrow"/>
+                {t("header.talk")} <img src="/digital/ui/arrow-up-right.svg" alt="arrow"/>
             </Talking>
         </Container>
     );

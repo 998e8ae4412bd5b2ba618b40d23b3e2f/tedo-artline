@@ -1,4 +1,5 @@
-import styled, { keyframes } from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+import {useTranslation} from "react-i18next";
 
 const scrollAnimation = keyframes`
   from {
@@ -15,7 +16,7 @@ const ScrollContainer = styled.div`
   overflow: hidden;
   white-space: nowrap;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     margin-top: 20px;
   }
 `;
@@ -35,17 +36,17 @@ const ScrollText2 = styled.div`
   font-size: clamp(1.375rem, 0.9789rem + 1.2676vw, 2.5rem);
   font-family: "Fixel Bold", serif;
   color: #1344F0;
-  background: #000;
 `;
 
 const ScrollingText = () => {
+    const {t} = useTranslation();
     return (
         <ScrollContainer id="scroll-container">
             <ScrollText1>
-                Relentless innovators. We turn your visions into realities, exceeding expectations every time. Choose us for unmatched creativity and craftsmanship.
+                {t("main.home.scrollingText")}
             </ScrollText1>
             <ScrollText2>
-                Relentless innovators. We turn your visions into realities, exceeding expectations every time. Choose us for unmatched creativity and craftsmanship.
+                {t("main.home.scrollingText")}
             </ScrollText2>
         </ScrollContainer>
     );

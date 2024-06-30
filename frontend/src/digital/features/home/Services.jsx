@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ServiceSliderHorizontal from "./ServiceSliderHorizontal.jsx"
 import ServiceSliderVertical from "./ServiceSliderVertical.jsx";
+import {Trans} from "react-i18next";
 
 
 const Container = styled.div`
@@ -77,11 +78,14 @@ const EndImg = styled.img`
 
 
 const Services = () => {
+
     return (
         <Container>
             <Text>
                 <StartImg src="/digital/home/arrow-down.svg" alt="arrow-icon"/>
-                <h2>Experience <span>the</span> Exceptional</h2>
+                <h2>
+                    <Trans i18nKey="main.home.services" components={{1: <span/>}}/>
+                </h2>
                 <EndImg src="/digital/home/arrow-down.svg" alt="arrow-icon"/>
             </Text>
             {window.innerWidth <= 768 ? <ServiceSliderVertical/> : <ServiceSliderHorizontal/>}

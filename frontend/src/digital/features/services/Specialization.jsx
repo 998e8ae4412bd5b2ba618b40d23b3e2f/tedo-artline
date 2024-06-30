@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {useNavigate, useParams} from "react-router-dom";
+import {Trans} from "react-i18next";
 
 
 const Container = styled.div`
@@ -85,11 +86,17 @@ const Specialization = () => {
     return (
         <Container>
             <Item onClick={() => navigate("/digital/services/ui-ux")}
-                  active={id === "ui-ux" ? "true" : null}><span>UI/UX</span> Design</Item>
+                  active={id === "ui-ux" ? "true" : null}>
+                <Trans i18nKey="main.service.specialization.ui-ux" components={{ 1: <span /> }} />
+            </Item>
             <Item onClick={() => navigate("/digital/services/graphic")}
-                  active={id === "graphic" ? "true" : null}><span>Graphic</span> Design</Item>
+                  active={id === "graphic" ? "true" : null}>
+                <Trans i18nKey="main.service.specialization.graphic" components={{ 1: <span /> }} />
+            </Item>
             <Item onClick={() => navigate("/digital/services/2d")}
-                  active={id === "2d" ? "true" : null}><span>2D</span> Design</Item>
+                  active={id === "2d" ? "true" : null}>
+                <Trans i18nKey="main.service.specialization.2d" components={{ 1: <span /> }} />
+            </Item>
         </Container>
     );
 };

@@ -1,1 +1,134 @@
-{}
+{
+  "header": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "partners": "Our Partners",
+    "talk": "Let's talk",
+    "menu": "Menu",
+    "solutions": "Architectural solutions"
+  },
+  "footer": {
+    "heading": "Got a Crazy Idea? Let's Make It Happen! <1/> <2>Get in Touch!</2>",
+    "copyright": "Copyright 2024 Tedo Artline. All rights Reserved."
+  },
+  "main": {
+    "home": {
+      "heading": {
+        "1": "Where digital commerce Meets Expertise",
+        "2": "Revolutionizing digital commerce with intuitive design and innovative solutions, we optimize user experience and drive growth to elevate your digital presence."
+      },
+      "mission": {
+        "1": "<1>We</1> are committed to innovation and excellence, working with you to bring your ideas to life - whether in a digital or physical environment.",
+        "2": "When you choose <2>Tedo Artline</2>, you get a guarantee of unrivaled craftsmanship, attention to detail, and a commitment to exceeding your expectations."
+      },
+      "partners": {
+        "title": "Partners",
+        "button": "See More"
+      },
+      "scrollingText": "Relentless innovators. We turn your visions into realities, exceeding expectations every time. Choose us for unmatched creativity and craftsmanship.",
+      "services": "Experience <1>the</1> Exceptional",
+      "servicesSlider": {
+        "1": {
+          "h2": "<1>UI/UX</1> Design",
+          "p1": "UI/UX design service focuses on creating intuitive and visually stunning user <1>interfaces</1>. We prioritize user <1>experience</1>, ensuring that every interaction is seamless and engaging.",
+          "p2": "From wireframing to <1>prototyping</1>, we leverage cutting-edge technologies to craft interfaces that captivate and delight users."
+        },
+        "2": {
+          "h2": "<1>Graphic</1> Design",
+          "p1": "Bring ideas to life through captivating visual <1>storytelling</1>. From logos to marketing materials, we specialize in creating impactful brand identities that resonate with your target audience.",
+          "p2": "Utilizing <1>cutting-edge technologies</1>, we create captivating and <1>user-friendly</1> interfaces through wireframing and prototyping in our Graphic Design services."
+        },
+        "3": {
+          "h2": "<1>2D</1> Design",
+          "p1": "Transform your ideas into compelling visual narratives with our 2D Design service. From logos to marketing materials, we specialize in crafting <1>impactful brand identities</1> that connect with your target audience.",
+          "p2": "Utilizing state-of-the-art techniques from wireframing to prototyping, we create interfaces that captivate and engage users, ensuring an unforgettable experience."
+        }
+      },
+      "slogan": "\"At <1>Tedo Artline, </1> we're"
+    },
+    "service": {
+      "specialization": {
+        "ui-ux": "<1>UI/UX</1> Design",
+        "graphic": "<1>Graphic</1> Design",
+        "2d": "<1>2D</1> Design"
+      },
+      "text": {
+        "1": "At <1>Tedo Artline</1>, we're experts in delivering tailored graphic design solutions that cater specifically to our clients' diverse needs and preferences.",
+        "2": "Whether you're initiating a new brand identity or refining an existing one, rely on us to actualize your vision and enhance your digital footprint.",
+        "3": "<1>Our team</1> of experienced designers seamlessly blends creativity with technical expertise to deliver intuitive and visually stunning digital experiences."
+      },
+      "budget": "Your Budget, Your Choice",
+      "projector": "Meet the talented individuals behind our UI/UX design team."
+    },
+    "about": {
+      "welcome": {
+        "p": "Discover the values, mission, and vision that drive Tedo Artline, and meet the passionate individuals behind our innovative designs.",
+        "h1": "Who <1>We</1> Are"
+      },
+      "experience": {
+        "h1": "Tedo Artline",
+        "h2": "Crafting Experiences Across Digital and Physical Realms",
+        "p": "At Tedo Artline, we are at the forefront of creative innovation, offering a diverse range of design solutions spanning UI/UX, graphic design, interior design, landscape architecture, and 2D design. Our\n                multidisciplinary team of experts is dedicated to elevating every aspect of your project, ensuring a seamless fusion of aesthetics and functionality."
+      },
+      "designers": {
+        "1": {
+          "name":"UI/UX Design",
+          "p1": "Crafting intuitive and visually stunning user interfaces.",
+          "p2": "Ensuring exceptional user experiences through meticulous design principles",
+          "p3": " Incorporating cutting-edge technologies for interactive and engaging interfaces."
+        },
+        "2": {
+          "name":"Graphic Design",
+          "p1": "Bringing ideas to life through captivating visual storytelling.",
+          "p2": "Creating impactful branding elements, including logos, graphics, and marketing materials.",
+          "p3": "Tailoring designs to resonate with your target audience and enhance brand recognition."
+        },
+        "3": {
+          "name":"2D Design",
+          "p1": "Providing versatile and dynamic visual solutions across various mediums.",
+          "p2": "Delivering illustrations, animations, and graphic elements that captivate audiences.",
+          "p3": "Customizing designs to suit specific project requirements and objectives."
+        }
+      }
+    },
+    "partners": {
+      "heading": {
+        "h1": "Unleashing collaborative synergy:",
+        "p": "Our Valued Partnerships"
+      },
+      "text1": {
+        "p1": "At Tedo, we believe in the power of collaboration and partnership to drive innovation and achieve remarkable results.",
+        "p2": "Explore our valued partnerships below and discover how together, we&apos;re shaping the future of digital excellence"
+      },
+      "text2": {
+        "p1": "At Tedo Gen, we're dedicated to fostering innovation through collaboration and partnership. ",
+        "p2": "Our Tedo Gen initiative provides young talents with invaluable commercial experience in IT through participation in charitable projects.",
+        "p3": "With mentorship from experienced professionals, participants develop their skills and chart their career paths."
+      },
+      "slogan": "We believe in empowering the next generation of IT specialists to shape the future of technology."
+    },
+    "contact": {
+      "hand": "Let’s Do Magic",
+      "form-toast": {
+        "name": "Please provide your name",
+        "email": "Please provide your email",
+        "valid-email": "Please provide a valid email",
+        "success": "We received your message, wait for a reply"
+      },
+      "form": {
+        "1": "I’m Looking For..?",
+        "2": "Looking for pricing options?",
+        "3": "Name",
+        "4": "Email",
+        "5": "Your Message",
+        "button": "Send Enquiry",
+        "active-button": "Thank You for Reaching Out.",
+        "basic": "Basic",
+        "advanced":"Advanced",
+        "professional": "Professional",
+        "design": "Design"
+      }
+    }
+  }
+}

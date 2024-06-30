@@ -33,16 +33,17 @@ const Links = styled.div`
 
 
 const NavBar = () => {
+    const {t}=useTranslation();
 
     return (
         <Container>
             <Logo/>
             <Links>
-                <StyledLink to={"digital/home"}>Home</StyledLink>
-                <StyledLink to={"digital/services/ui-ux"} path={"service"}>Services</StyledLink>
-                <StyledLink to={"digital/about"}>About Us</StyledLink>
-                <StyledLink to={"digital/partners"}>Our Partners</StyledLink>
-                <StyledLink to={"digital/contact"}>Let’s talk <img src="/digital/ui/arrow-up-right.svg" alt="arrow"/></StyledLink>
+                <StyledLink to={"digital/home"}>{t("header.home")}</StyledLink>
+                <StyledLink to={"digital/services/ui-ux"} path={"service"}>{t("header.services")}</StyledLink>
+                <StyledLink to={"digital/about"}>{t("header.about")}</StyledLink>
+                <StyledLink to={"digital/partners"}>{t("header.partners")}</StyledLink>
+                <StyledLink to={"digital/contact"}>{t("header.talk")} <img src="/digital/ui/arrow-up-right.svg" alt="arrow"/></StyledLink>
             </Links>
         </Container>
     );

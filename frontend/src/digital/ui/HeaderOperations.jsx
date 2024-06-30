@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 import Language from "./Language.jsx";
 import Burger from "./Burger.jsx";
+import {useTranslation} from "react-i18next";
 
 
 const Container = styled.div`
@@ -90,6 +91,8 @@ const Solutions = styled(Link)`
 `
 
 const HeaderOperations = () => {
+    const {t}=useTranslation();
+
     const redirect = (path) => {
         window.location.href = path;
     };
@@ -99,7 +102,7 @@ const HeaderOperations = () => {
             <SocialLinkedin onClick={()=>redirect('https://www.linkedin.com')}/>
             <SocialMail onClick={()=>redirect('https://www.gmail.com')}/>
             <Language/>
-            <Solutions to={"/architecture/home"}>Architectural solutions</Solutions>
+            <Solutions to={"/architecture/home"}>{t("header.solutions")}</Solutions>
             {window.innerWidth <= 768 ? <Burger/> : null}
         </Container>
     );

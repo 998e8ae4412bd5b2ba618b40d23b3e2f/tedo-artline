@@ -5,6 +5,7 @@ import PricingSelect from "./PricingSelect.jsx";
 import Input from "./Input.jsx";
 import TextArea from "./TextArea.jsx";
 import toast from "react-hot-toast";
+import {useTranslation} from "react-i18next";
 
 const Container = styled.div`
   margin-top: 100px;
@@ -100,6 +101,8 @@ const Btn = styled.button`
 
 
 const Form = () => {
+    const {t}=useTranslation()
+
     const [designerOption, setDesignerOption] = useState("ui-ux");
     const [pricingOption, setPricingOption] = useState("advanced");
     const [name, setName] = useState("");
@@ -112,17 +115,17 @@ const Form = () => {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (name === "") {
-            toast.error("Please provide your name");
+            toast.error(t("main.contact.form-toast.name"));
             return;
         }
 
         if (email === "") {
-            toast.error("Please provide your email");
+            toast.error(t("main.contact.form-toast.email"));
             return;
         }
 
         if (!emailPattern.test(email)) {
-            toast.error("Please provide a valid email");
+            toast.error(t("main.contact.form-toast.valid-email"));
             return;
         }
 
@@ -141,7 +144,7 @@ const Form = () => {
             });
 
             if (response.ok) {
-                toast.success("We received your message, wait for a reply");
+                toast.success(t("main.contact.form-toast.success"));
                 setIsSent(true);
             } else {
                 console.error('Failed to send data to the server');
@@ -161,22 +164,22 @@ const Form = () => {
 
     return (
         <Container>
-            <P>I’m Looking For..?</P>
+            <P>{t("main.contact.form.1")}</P>
             <DesignerSelect option={designerOption} setOption={setDesignerOption}/>
-            <P>Looking for pricing options?</P>
+            <P>{t("main.contact.form.2")}</P>
             <PricingSelect setOption={setPricingOption} option={pricingOption}/>
-            <P>Name</P>
+            <P>{t("main.contact.form.3")}</P>
             <Input onChange={(e) => setName(e.target.value)} value={name} type={"text"} placeholder={"Name"}/>
-            <P>Email</P>
+            <P>{t("main.contact.form.4")}</P>
             <Input onChange={(e) => setEmail(e.target.value)} value={email} type={"email"}
                    placeholder={"mail@example.com"}/>
-            <P>Your Message</P>
+            <P>{t("main.contact.form.5")}</P>
             <TextArea value={comment} onChange={(e) => setComment(e.target.value)} placeholder={"Your Message"}/>
             <Btn type={"submit"}
                 onClick={(e) => handleSubmit(e)}
                 disabled={isSent}>
                 <span>
-                    {isSent ? "Thank You for Reaching Out." : "Send Enquiry"}
+                    {isSent ? t("main.contact.form.active-button") : t("main.contact.form.button")}
                     <img src="/digital/ui/arrow-up-right.svg" alt="arrow-icon"/>
                 </span>
             </Btn>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Trans} from "react-i18next";
 
 const Container = styled.div`
   margin: 200px auto 0;
@@ -45,23 +46,25 @@ const Img = styled.img`
 const Text = () => {
 
 
-
     return (
         <Container>
             <Item>
                 <Img src="/digital/services/list.svg" alt="icon"/>
-                <p>At <span>Tedo Artline</span>, we&apos;re experts in delivering tailored graphic design solutions that
-                    cater specifically to our clients&apos; diverse needs and preferences.</p>
+                <p>
+                    <Trans i18nKey="main.service.text.1" components={{1: <span/>}}/>
+                </p>
             </Item>
             <Item>
                 <Img src="/digital/services/list.svg" alt="icon"/>
-                <p>Whether you&apos;re initiating a new brand identity or refining an existing one, rely on us to actualize
-                    your vision and enhance your digital footprint.</p>
+                <p>
+                    <Trans i18nKey="main.service.text.2" components={{1: <span/>}}/>
+                </p>
             </Item>
             <Item>
                 <Img src="/digital/services/list.svg" alt="icon"/>
-                <p><span>Our team</span> of experienced designers seamlessly blends creativity with technical expertise
-                    to deliver intuitive and visually stunning digital experiences.</p>
+                <p>
+                    <Trans i18nKey="main.service.text.3" components={{1: <span/>}}/>
+                </p>
             </Item>
         </Container>
     );

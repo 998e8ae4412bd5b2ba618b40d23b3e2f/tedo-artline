@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {useTranslation} from "react-i18next";
 
 
 const Container = styled.div`
@@ -36,14 +37,13 @@ const Container = styled.div`
 `
 
 const Experience = () => {
+    const {t}=useTranslation()
+
     return (
         <Container>
-            <h1>Tedo Artline</h1>
-            <h2>Crafting Experiences Across Digital and Physical Realms</h2>
-            <p>At Tedo Artline, we are at the forefront of creative innovation, offering a diverse range of design
-                solutions spanning UI/UX, graphic design, interior design, landscape architecture, and 2D design. Our
-                multidisciplinary team of experts is dedicated to elevating every aspect of your project, ensuring a
-                seamless fusion of aesthetics and functionality.</p>
+            <h1>{t("main.about.experience.h1")}</h1>
+            <h2>{t("main.about.experience.h2")}</h2>
+            <p>{t("main.about.experience.p")}</p>
         </Container>
     );
 };

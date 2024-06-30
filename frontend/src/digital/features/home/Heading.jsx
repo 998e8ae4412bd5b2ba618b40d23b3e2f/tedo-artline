@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {useTranslation} from "react-i18next";
 
 const Container = styled.div`
   margin-top: 140px;
@@ -62,11 +63,12 @@ const SmallBubble = styled.img`
 `
 
 const Heading = () => {
+    const { t } = useTranslation();
+
     return (
         <Container>
-            <h1>Where digital commerce Meets Expertise</h1>
-            <p>Revolutionizing digital commerce with intuitive design and innovative solutions, we optimize user
-                experience and drive growth to elevate your digital presence.</p>
+            <h1>{t('main.home.heading.1')}</h1>
+            <p>{t('main.home.heading.2')}</p>
                 <SmallBubble src="/digital/home/small-bubble.svg" alt="bubble-icon"/>
                 <BigBubble src="/digital/home/big-bubble.svg" alt="bubble-icon"/>
         </Container>

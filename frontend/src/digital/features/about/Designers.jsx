@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {useTranslation} from "react-i18next";
 
 
 const Container = styled.div`
@@ -74,7 +75,7 @@ const Name = styled.h2`
   font-size: clamp(1.75rem, 1.3462rem + 1.7949vw, 3.5rem);
   z-index: 3;
   color: #F2F6FF;
-  
+
 
   @media (max-width: 768px) {
     width: 70vw;
@@ -84,13 +85,13 @@ const Name = styled.h2`
 const Description = styled.div`
   width: 50vw;
   z-index: 2;
-  
+
   & > p {
     margin-bottom: 15px;
     font-family: "Fixel ExtraLight", serif;
     font-size: clamp(1rem, 0.8269rem + 0.7692vw, 1.75rem);
     color: #F2F6FF;
-    
+
   }
 
   @media (max-width: 1600px) {
@@ -108,6 +109,7 @@ const Description = styled.div`
 `
 
 const Designers = () => {
+    const {t} = useTranslation()
 
     let image = {
         1: "/digital/about/line-desktop-1.svg",
@@ -125,29 +127,29 @@ const Designers = () => {
     return (
         <Container>
             <Item>
-                <Name>UI/UX Design</Name>
+                <Name>{t("main.about.designers.1.name")}</Name>
                 <Description>
-                    <p>Crafting intuitive and visually stunning user interfaces.</p>
-                    <p>Ensuring exceptional user experiences through meticulous design principles.</p>
-                    <p> Incorporating cutting-edge technologies for interactive and engaging interfaces.</p>
+                    <p>{t("main.about.designers.1.p1")}</p>
+                    <p>{t("main.about.designers.1.p2")}</p>
+                    <p>{t("main.about.designers.1.p3")}</p>
                 </Description>
                 <img src={image[1]} alt="line-img"/>
             </Item>
             <Item>
-                <Name>Graphic Design</Name>
+                <Name>{t("main.about.designers.2.name")}</Name>
                 <Description>
-                    <p>Bringing ideas to life through captivating visual storytelling.</p>
-                    <p>Creating impactful branding elements, including logos, graphics, and marketing materials.</p>
-                    <p>Tailoring designs to resonate with your target audience and enhance brand recognition.</p>
+                    <p>{t("main.about.designers.2.p1")}</p>
+                    <p>{t("main.about.designers.2.p2")}</p>
+                    <p>{t("main.about.designers.2.p3")}</p>
                 </Description>
                 <img src={image[3]} alt="line-img"/>
             </Item>
             <Item>
-                <Name>2D Design</Name>
+                <Name>{t("main.about.designers.3.name")}</Name>
                 <Description>
-                    <p>Providing versatile and dynamic visual solutions across various mediums.</p>
-                    <p>Delivering illustrations, animations, and graphic elements that captivate audiences.</p>
-                    <p>Customizing designs to suit specific project requirements and objectives.</p>
+                    <p>{t("main.about.designers.3.p1")}</p>
+                    <p>{t("main.about.designers.3.p2")}</p>
+                    <p>{t("main.about.designers.3.p3")}</p>
                 </Description>
                 <img src={image[2]} alt="line-img"/>
             </Item>

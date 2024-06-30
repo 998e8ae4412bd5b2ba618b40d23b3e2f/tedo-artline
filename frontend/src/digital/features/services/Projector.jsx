@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {useTranslation} from "react-i18next";
 
 
 const StyledProjector = styled.div`
@@ -48,11 +49,13 @@ const StyledProjector = styled.div`
   }
 `
 const Projector = () => {
+    const {t}=useTranslation();
+
     return (
         <StyledProjector>
             <img src={window.innerWidth <= 768 ? "/digital/services/bg.svg" : "/digital/services/projector.svg"}
                  alt="projector-img"/>
-            <h2>Meet the talented individuals behind our UI/UX design team.</h2>
+            <h2>{t("main.service.projector")}</h2>
         </StyledProjector>
     );
 };

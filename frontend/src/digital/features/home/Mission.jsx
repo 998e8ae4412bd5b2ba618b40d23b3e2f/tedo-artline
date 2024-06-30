@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Trans} from "react-i18next";
 
 const Container = styled.div`
   width: 60vw;
@@ -77,12 +78,10 @@ const Mission = () => {
     return (
         <Container>
             <P>
-                <BigSpan>We</BigSpan> are committed to innovation and excellence, working with you to bring your ideas to life
-                - whether in a digital or physical environment.
+                <Trans i18nKey="main.home.mission.1" components={{ 1: <BigSpan /> }} />
             </P>
             <P>
-                When you choose <SmallSpan>Tedo Artline</SmallSpan>, you get a guarantee of unrivaled craftsmanship, attention to
-                detail, and a commitment to exceeding your expectations.
+                <Trans i18nKey="main.home.mission.2" components={{ 2: <SmallSpan /> }} />
             </P>
             <Heading>Your success <span>is</span> our mission</Heading>
         </Container>

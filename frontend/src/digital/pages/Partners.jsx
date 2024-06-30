@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import {useTranslation} from "react-i18next";
 
 const Container = styled.div`
   margin-top: 140px;
   width: 90vw;
-  
-  @media(max-width: 768px){
+
+  @media (max-width: 768px) {
     margin-top: -30px;
-    
+
   }
 `
 
@@ -40,8 +41,8 @@ const TedoGroup = styled.div`
   & > div {
     position: relative;
   }
-  
-  @media(max-width: 768px){
+
+  @media (max-width: 768px) {
     margin-top: 120px;
     flex-direction: column;
   }
@@ -65,7 +66,7 @@ const TedoGeneration = styled.div`
     position: relative;
   }
 
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     margin-top: 120px;
     flex-direction: column;
     gap: 0;
@@ -73,7 +74,7 @@ const TedoGeneration = styled.div`
 `
 
 const TextBox = styled.div`
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     order: 2;
   }
 `
@@ -81,7 +82,7 @@ const TextBox = styled.div`
 const PartnerImg = styled.img`
   width: 300px;
   height: auto;
-  
+
 `
 
 const SmallQuote = styled.img`
@@ -89,7 +90,7 @@ const SmallQuote = styled.img`
   padding-right: 10px;
   padding-bottom: 30px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     padding-right: 0;
     padding-bottom: 10px;
     width: 20px;
@@ -111,28 +112,29 @@ const Slogan = styled.h2`
 
   @media (max-width: 768px) {
     margin-top: 150px;
-  margin-bottom: -100px;
+    margin-bottom: -100px;
   }
 `
 
 
 const Partners = () => {
+    const {t} = useTranslation()
+
     return (
         <Container>
             <Heading>
-                <h1>Unleashing collaborative synergy:</h1>
-                <p>Our Valued Partnerships</p>
+                <h1>{t("main.partners.heading.h1")}</h1>
+                <p>{t("main.partners.heading.p")}</p>
             </Heading>
             <TedoGroup>
                 <div>
                     <PartnerImg src="/digital/partners/tedo-group.svg" alt="tedo-group-image"/>
                 </div>
                 <TextBox>
-                    <p><SmallQuote src="/digital/partners/blue-quote.svg" alt="quote-icon"/>At Tedo, we believe in the power of
-                        collaboration and partnership to drive innovation and
-                        achieve remarkable results.</p>
-                    <p>Explore our valued partnerships below and discover how together, we&apos;re shaping the future of
-                        digital excellence</p>
+                    <p><SmallQuote src="/digital/partners/blue-quote.svg" alt="quote-icon"/>
+                        {t("main.partners.text1.p1")}
+                    </p>
+                    <p>{t("main.partners.text1.p2")}</p>
                     <BigQuote src="/digital/partners/blue-quote.svg" alt="quote-icon"/>
                 </TextBox>
             </TedoGroup>
@@ -140,20 +142,21 @@ const Partners = () => {
                 <TextBox>
                     <p>
                         <SmallQuote src="/digital/partners/green-quote.svg" alt="quote-icon"/>
-                        At Tedo Gen, we&apos;re dedicated
-                        to fostering innovation through collaboration and
-                        partnership. </p>
-                    <p>Our Tedo Gen initiative provides young talents with invaluable commercial experience in IT
-                        through participation in charitable projects. </p>
-                    <p>With mentorship from experienced professionals, participants develop their skills and chart their
-                        career paths.</p>
+                        {t("main.partners.text2.p1")}
+                    </p>
+                    <p>
+                        {t("main.partners.text2.p2")}
+                    </p>
+                    <p>
+                        {t("main.partners.text2.p3")}
+                    </p>
                     <BigQuote src="/digital/partners/green-quote.svg" alt="quote-icon"/>
                 </TextBox>
                 <div>
                     <PartnerImg src="/digital/partners/tedo-generation.svg" alt="tedo-generation-image"/>
                 </div>
             </TedoGeneration>
-            <Slogan>We believe in empowering the next generation of IT specialists to shape the future of technology.</Slogan>
+            <Slogan>{t("main.partners.slogan")}</Slogan>
         </Container>
     );
 };

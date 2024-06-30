@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Trans, useTranslation} from "react-i18next";
 
 const Container = styled.footer`
   margin-top: 280px;
@@ -115,6 +116,7 @@ const Copyright = styled.div`
 `;
 
 const Footer = () => {
+    const {t}=useTranslation()
     const redirect = (path) => {
         window.location.href = path;
     };
@@ -122,13 +124,15 @@ const Footer = () => {
     return (
         <Container>
             <Content>
-                <Heading>Got a Crazy Idea? Let&apos;s Make It Happen! <br/> <span>Get in Touch!</span></Heading>
+                <Heading>
+                    <Trans i18nKey="footer.heading" components={{ 1: <br />,2:<span/> }} />
+                </Heading>
                 <Socials>
                     <Mail onClick={()=>redirect('https://www.gmail.com')}/>
                     <Linkedin onClick={()=>redirect('https://www.linkedin.com')}/>
                 </Socials>
             </Content>
-            <Copyright>Copyright 2024 Tedo Artline. All rights Reserved.</Copyright>
+            <Copyright>{t("footer.copyright")}</Copyright>
         </Container>
     );
 };

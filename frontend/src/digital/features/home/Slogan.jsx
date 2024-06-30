@@ -1,5 +1,6 @@
 import ScrollingText from "./Scrolling-text.jsx";
 import styled from "styled-components";
+import {Trans} from "react-i18next";
 
 const Container = styled.div`
   margin-top: 450px;
@@ -53,7 +54,7 @@ const Slogan = () => {
         <Container>
             <StyledSlogan>
                 <Line src="/digital/home/line.svg" alt="line-icon"/>
-                <Heading>&quot;At <span>Tedo Artline, </span> we&apos;re</Heading>
+                <Heading><Trans i18nKey="main.home.slogan" components={{ 1: <span /> }} /></Heading>
             </StyledSlogan>
             <ScrollingText/>
         </Container>

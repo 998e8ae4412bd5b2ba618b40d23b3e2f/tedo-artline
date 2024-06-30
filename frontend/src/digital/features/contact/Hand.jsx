@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {useTranslation} from "react-i18next";
 
 const Container = styled.div`
   width: 100%;
@@ -6,14 +7,13 @@ const Container = styled.div`
   height: 1500px;
 
 
-  
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     height: 1000px;
     overflow: hidden;
     margin-top: -130px;
   }
-  
-  
+
+
 `
 
 const GreenImg = styled.img`
@@ -21,8 +21,8 @@ const GreenImg = styled.img`
   z-index: 2;
   width: 60%;
   top: -5%;
-  
-  @media(max-width: 768px){
+
+  @media (max-width: 768px) {
     top: -25%;
     width: 80%;
   }
@@ -46,7 +46,7 @@ const BigBlueImg = styled.img`
     width: 800px;
   }
 
- 
+
 `
 
 
@@ -56,7 +56,7 @@ const SmallBlueImg = styled.img`
   top: 32vw;
   width: 80%;
 
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     top: 20%;
     left: -100px;
   }
@@ -65,11 +65,10 @@ const SmallBlueImg = styled.img`
 `
 
 
-
 const Heading = styled.h2`
   font-size: clamp(5rem, 0.5rem + 9.375vw, 11.75rem);
   color: #F2F6FF;
-  font-family: "Fixel Bold",serif;
+  font-family: "Fixel Bold", serif;
   text-align: center;
   position: absolute;
   z-index: 15;
@@ -77,13 +76,12 @@ const Heading = styled.h2`
   width: 70%;
 
 
-
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     font-size: clamp(5.75rem, 4.2059rem + 6.8627vw, 7.5rem);
     width: 50%;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
   }
 
@@ -99,21 +97,23 @@ const HandImg = styled.img`
   top: 40vw;
   width: 100%;
   z-index: 4;
-  
-  
-  @media(max-width: 768px){
+
+
+  @media (max-width: 768px) {
     display: none;
   }
 `
 
 
 const Hand = () => {
+    const {t} = useTranslation()
+
     return (
         <Container>
             <GreenImg src="/digital/contact/green.svg" alt="green-img"/>
             <BigBlueImg src="/digital/contact/blue.svg" alt="blue-img"/>
             <SmallBlueImg src="/digital/contact/blue.svg" alt="blue-img"/>
-            <Heading>Let’s Do Magic</Heading>
+            <Heading>{t("main.contact.hand")}</Heading>
             <HandImg src="/digital/contact/hand.svg" alt="hand-img"/>
         </Container>
     );

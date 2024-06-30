@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Trans} from "react-i18next";
 
 const Wrapper = styled.div`
   overflow-y: scroll;
@@ -78,38 +79,45 @@ const ServiceSliderVertical = () => {
                 <SliderItem>
                     <Img src="/digital/home/border-slider.svg" alt="bg-image"/>
                     <Content>
-                        <h2><span>UI/UX</span> Design</h2>
-                        <p>UI/UX design service focuses on creating intuitive and visually stunning
-                            user <span>interfaces</span>. We prioritize user <span>experience</span>, ensuring
-                            that every interaction is seamless and engaging.</p>
-                        <p>From wireframing to <span>prototyping</span>, we leverage cutting-edge technologies
-                            to craft interfaces that captivate and delight users.</p>
+                        <h2>
+                            <Trans i18nKey="main.home.servicesSlider.1.h2" components={{ 1: <span /> }} />
+                        </h2>
+                        <p>
+                            <Trans i18nKey="main.home.servicesSlider.1.p1" components={{ 1: <span /> }} />
+                        </p>
+                        <p>
+                            <Trans i18nKey="main.home.servicesSlider.1.p2" components={{ 1: <span /> }} />
+                        </p>
                     </Content>
                     <Arrow src="/digital/home/arrow-navigation-to-page.svg" alt="arrow-icon"/>
                 </SliderItem>
                 <SliderItem>
                     <Img src="/digital/home/border-slider.svg" alt="bg-image"/>
                     <Content>
-                        <h2><span>Graphic</span> Design</h2>
-                        <p>Bring ideas to life through captivating visual <span>storytelling</span>. From logos
-                            to marketing materials, we specialize in creating impactful brand identities that
-                            resonate with your target audience.</p>
-                        <p>Utilizing <span>cutting-edge technologies</span>, we create captivating
-                            and <span>user-friendly</span> interfaces through wireframing and prototyping in our
-                            Graphic Design services.</p>
+                        <h2>
+                            <Trans i18nKey="main.home.servicesSlider.2.h2" components={{ 1: <span /> }} />
+                        </h2>
+                        <p>
+                            <Trans i18nKey="main.home.servicesSlider.2.p1" components={{ 1: <span /> }} />
+                        </p>
+                        <p>
+                            <Trans i18nKey="main.home.servicesSlider.2.p2" components={{ 1: <span /> }} />
+                        </p>
                     </Content>
                     <Arrow src="/digital/home/arrow-navigation-to-page.svg" alt="arrow-icon"/>
                 </SliderItem>
                 <SliderItem>
                     <Img src="/digital/home/border-slider.svg" alt="bg-image"/>
                     <Content>
-                        <h2><span>2D</span> Design</h2>
-                        <p>Transform your ideas into compelling visual narratives with our 2D Design service.
-                            From logos to marketing materials, we specialize in crafting <span>impactful brand identities</span> that
-                            connect with your target audience.</p>
-                        <p>Utilizing state-of-the-art techniques from wireframing to prototyping, we create
-                            interfaces that captivate and engage users, ensuring an unforgettable
-                            experience.</p>
+                        <h2>
+                            <Trans i18nKey="main.home.servicesSlider.3.h2" components={{ 1: <span /> }} />
+                        </h2>
+                        <p>
+                            <Trans i18nKey="main.home.servicesSlider.3.p1" components={{ 1: <span /> }} />
+                        </p>
+                        <p>
+                            <Trans i18nKey="main.home.servicesSlider.3.p2" components={{ 1: <span /> }} />
+                        </p>
                     </Content>
                     <Arrow src="/digital/home/arrow-navigation-to-page.svg" alt="arrow-icon"/>
                 </SliderItem>

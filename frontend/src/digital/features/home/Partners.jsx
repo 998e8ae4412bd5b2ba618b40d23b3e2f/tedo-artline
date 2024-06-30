@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Slogan from "./Slogan.jsx";
 import {useNavigate} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const Container = styled.div`
   margin: 350px auto 0;
@@ -102,28 +103,34 @@ const Layer = styled.div`
 `;
 
 const Partners = () => {
-    const navigate = useNavigate()
+    const { t } = useTranslation();
+    const navigate = useNavigate();
+
     return (
         <>
             <Container>
-                <Heading>Partners</Heading>
+                <Heading>{t('main.home.partners.title')}</Heading>
                 <Images>
-                    <Big src="/digital/home/partners-big-image.svg" alt="poster"/>
+                    <Big src="/digital/home/partners-big-image.svg" alt="poster" />
                     <GroupContainer>
                         <Layer>
-                            <button onClick={()=>navigate("/digital/partners")}>See More</button>
+                            <button onClick={() => navigate("/digital/partners")}>
+                                {t('main.home.partners.button')}
+                            </button>
                         </Layer>
-                        <img src="/digital/home/tedo-group.svg" alt="tedo-group image"/>
+                        <img src="/digital/home/tedo-group.svg" alt="tedo-group image" />
                     </GroupContainer>
                     <GenerationContainer>
                         <Layer>
-                            <button onClick={()=>navigate("/digital/partners")}>See More</button>
+                            <button onClick={() => navigate("/digital/partners")}>
+                                {t('main.home.partners.button')}
+                            </button>
                         </Layer>
-                        <img src="/digital/home/tedo-generation.svg" alt="tedo-generation image"/>
+                        <img src="/digital/home/tedo-generation.svg" alt="tedo-generation image" />
                     </GenerationContainer>
                 </Images>
             </Container>
-            <Slogan/>
+            <Slogan />
         </>
     );
 };

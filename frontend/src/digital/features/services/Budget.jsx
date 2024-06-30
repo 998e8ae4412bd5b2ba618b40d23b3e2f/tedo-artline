@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {useTranslation} from "react-i18next";
 
 const Container = styled.div`
   margin: 250px auto 0;
@@ -12,7 +13,7 @@ const Heading = styled.div`
   text-align: center;
   color: #1344F0;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     margin-top: -150px;
   }
 `
@@ -23,9 +24,9 @@ const Images = styled.div`
   display: flex;
   justify-content: space-between;
   height: 38vw;
-  
-  
-  @media(max-width: 768px){
+
+
+  @media (max-width: 768px) {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
@@ -89,9 +90,10 @@ const Basic = styled.div`
 `
 
 const Budget = () => {
+    const {t} = useTranslation();
     return (
         <Container>
-            <Heading>Your Budget, Your Choice</Heading>
+            <Heading>{t("main.service.budget")}</Heading>
             <Images>
                 <Professional/>
                 <Advanced/>

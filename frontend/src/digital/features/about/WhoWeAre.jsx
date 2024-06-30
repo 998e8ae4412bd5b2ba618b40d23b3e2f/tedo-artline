@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Trans, useTranslation} from "react-i18next";
 
 const Container = styled.div`
   width: 82vw;
@@ -38,11 +39,13 @@ const Container = styled.div`
 `
 
 const WhoWeAre = () => {
+    const {t}=useTranslation()
     return (
         <Container>
-            <p>Discover the values, mission, and vision that drive Tedo Artline, and meet the passionate individuals
-                behind our innovative designs.</p>
-            <h1>Who <span>We</span> Are</h1>
+            <p>{t("main.about.welcome.p")}</p>
+            <h1>
+                <Trans i18nKey="main.about.welcome.h1" components={{ 1: <span /> }} />
+            </h1>
             <img src={window.innerWidth <= 768 ? "/digital/about/dots-mobile.svg" : "/digital/about/dots-desktop.svg"} alt="dots-image"/>
         </Container>
     );
